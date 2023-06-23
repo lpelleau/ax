@@ -184,6 +184,11 @@ In your `~/.config/ax/ax.yaml` file (`ax env edit`) you can override the default
         attributevalue:
             faint: true
             fg: blue
+        error:
+            bg: white
+            fg: red
+            bold: true
+
 
 For each "color" you can set:
 

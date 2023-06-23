@@ -8,7 +8,7 @@ import (
 
 	"github.com/egnyte/ax/pkg/backend/common"
 	"github.com/egnyte/ax/pkg/cache"
-	"github.com/egnyte/ax/pkg/config"
+	"config"
 )
 
 const cacheFilename = "attribute-cache.json"

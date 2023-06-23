@@ -16,6 +16,7 @@ type ColorConfig struct {
 	AttributeKey   colorDef
 	AttributeValue colorDef
 	Message        colorDef
+	Error          colorDef
 }
 
 var defaultColorConfig ColorConfig = ColorConfig{

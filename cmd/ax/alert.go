@@ -8,7 +8,7 @@ import (
 	"github.com/egnyte/ax/pkg/alert"
 	"github.com/egnyte/ax/pkg/alert/slack"
 	"github.com/egnyte/ax/pkg/backend/common"
-	"github.com/egnyte/ax/pkg/config"
+	"config"
 )
 
 var (

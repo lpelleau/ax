@@ -17,7 +17,7 @@ import (
 	"github.com/egnyte/ax/pkg/backend/stackdriver"
 	"github.com/egnyte/ax/pkg/backend/stream"
 	"github.com/egnyte/ax/pkg/backend/subprocess"
-	"github.com/egnyte/ax/pkg/config"
+	"config"
 )
 
 var (

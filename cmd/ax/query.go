@@ -12,8 +12,8 @@ import (
 
 	"github.com/araddon/dateparse"
 	"github.com/egnyte/ax/pkg/backend/common"
-	"github.com/egnyte/ax/pkg/complete"
-	"github.com/egnyte/ax/pkg/config"
+	"complete"
+	"config"
 	"github.com/zefhemel/kingpin"
 	yaml "gopkg.in/yaml.v2"
 )
@@ -272,6 +272,9 @@ func printMessage(message common.LogMessage, queryOutputFormat string, colorConf
 	case "text":
 		ts := message.Timestamp.Format(common.TimeFormat)
 		timestampColor := config.ColorToTermColor(colorConfig.Timestamp)
+		if msg, ok := message.Attributes["level"].(string); ok && msg == "ERROR" {
+			timestampColor =  config.ColorToTermColor(colorConfig.Error)
+		}
 		fmt.Printf("%s ", timestampColor.Sprintf("[%s]", ts))
 		if msg, ok := message.Attributes["message"].(string); ok {
 			messageColor := config.ColorToTermColor(colorConfig.Message)
